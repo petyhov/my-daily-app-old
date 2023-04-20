@@ -1,8 +1,8 @@
-import Image from 'next/image'
-import styles from './styles.module.scss'
+import Image from 'next/image';
+import styles from './styles.module.scss';
 
-import ArrowIcon from '@/assets/icons/arrow-right.svg'
-import ClearIcon from '@/assets/icons/clear.svg'
+import ArrowIcon from '@/assets/icons/arrow-right.svg';
+import ClearIcon from '@/assets/icons/clear.svg';
 
 const MobileView = ({
   secretValue,
@@ -48,7 +48,7 @@ const MobileView = ({
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MobileView
+export default MobileView;

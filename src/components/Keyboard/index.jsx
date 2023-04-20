@@ -1,6 +1,6 @@
-import { memo } from 'react'
-import MobileView from './MobileView'
-import DesktopView from './DesktopView'
+import { memo } from 'react';
+import MobileView from './MobileView';
+import DesktopView from './DesktopView';
 
 const Keyboard = ({
   pageWidth,
@@ -10,11 +10,11 @@ const Keyboard = ({
   checkAnswer,
 }) => {
   const clickHandler = (e) => {
-    const value = e.target.value
+    const value = e.target.value;
     if (value) {
-      secretValueHandler(value)
+      secretValueHandler(value);
     }
-  }
+  };
 
   return (
     <>
@@ -34,7 +34,7 @@ const Keyboard = ({
         />
       )}
     </>
-  )
-}
+  );
+};
 
-export default memo(Keyboard)
+export default memo(Keyboard);

@@ -1,19 +1,19 @@
-import { useEffect, useState } from 'react'
-import { GameDashboard } from '@/components'
-import { fetchMathTasks } from '@/utils'
+import { useEffect, useState } from 'react';
+import { GameDashboard } from '@/components';
+import { fetchMathTasks } from '@/utils';
 
-import styles from '@/styles/gamePage.module.scss'
+import styles from '@/styles/gamePage.module.scss';
 
 const GamePage = ({ pageWidth }) => {
-  const [mathTasks, setMathTasks] = useState([])
+  const [mathTasks, setMathTasks] = useState([]);
 
   useEffect(() => {
     fetchMathTasks().then((data) => {
       if (data) {
-        setMathTasks(data)
+        setMathTasks(data);
       }
-    })
-  }, [])
+    });
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -23,7 +23,7 @@ const GamePage = ({ pageWidth }) => {
         )}
       </>
     </div>
-  )
-}
+  );
+};
 
-export default GamePage
+export default GamePage;

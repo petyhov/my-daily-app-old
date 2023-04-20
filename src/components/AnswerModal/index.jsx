@@ -1,11 +1,11 @@
-import Image from 'next/image'
-import SimpleTask from '../SimpleTask'
+import Image from 'next/image';
+import SimpleTask from '../SimpleTask';
 
-import ArrowIcon from '@/assets/icons/arrow-right.svg'
-import CorrectIcon from '@/assets/icons/checkbox-checked.svg'
-import WrongIcon from '@/assets/icons/cancel-circle.svg'
+import ArrowIcon from '@/assets/icons/arrow-right.svg';
+import CorrectIcon from '@/assets/icons/checkbox-checked.svg';
+import WrongIcon from '@/assets/icons/cancel-circle.svg';
 
-import styles from './styles.module.scss'
+import styles from './styles.module.scss';
 
 const AnswerModal = ({ isCorectAnswer, task, closeHandler }) => {
   return (
@@ -33,7 +33,7 @@ const AnswerModal = ({ isCorectAnswer, task, closeHandler }) => {
         />
       </button>
     </>
-  )
-}
+  );
+};
 
-export default AnswerModal
+export default AnswerModal;

@@ -1,21 +1,21 @@
-import React from 'react'
-import Head from 'next/head'
-import { useEffect, useState } from 'react'
+import React from 'react';
+import Head from 'next/head';
+import { useEffect, useState } from 'react';
 
-import '@/styles/globals.css'
+import '@/styles/globals.css';
 
 export default function App({ Component, pageProps }) {
-  const [pageWidth, setPageWidth] = useState(null)
+  const [pageWidth, setPageWidth] = useState(null);
 
   const handleResize = () => {
-    setPageWidth(window.innerWidth)
-  }
+    setPageWidth(window.innerWidth);
+  };
 
   useEffect(() => {
-    window.addEventListener('resize', handleResize)
-    handleResize()
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <>
@@ -48,5 +48,5 @@ export default function App({ Component, pageProps }) {
       </Head>
       <Component {...pageProps} pageWidth={pageWidth} />
     </>
-  )
+  );
 }

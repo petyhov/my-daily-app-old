@@ -1,14 +1,14 @@
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 const Home = () => {
-  const router = useRouter()
+  const router = useRouter();
 
   useEffect(() => {
-    router.push('/game')
-  }, [router])
+    router.push('/game');
+  }, [router]);
 
-  return <></>
-}
+  return <></>;
+};
 
-export default Home
+export default Home;
