@@ -1,0 +1,60 @@
+@keyframes makeItfadeIn {
+  100% {
+    background-position: left;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  margin: 10px 10px 20px;
+  .list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 550px;
+    width: 100%;
+    .item {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 68px;
+      height: 68px;
+
+      p {
+        font-size: 54px;
+        font-weight: bold;
+        color: var(--main-color);
+      }
+    }
+    .secret {
+      border: 4px solid var(--purple-color);
+      background: linear-gradient(
+        to right,
+        var(--purple-color) 50%,
+        transparent 0
+      );
+
+      background-size: 200% 100%;
+      background-position: right;
+      animation: makeItfadeIn 20s linear forwards;
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  .container {
+    flex-grow: 0;
+    .list {
+      .item {
+        width: 110px;
+        height: 110px;
+        p {
+          font-size: 80px;
+        }
+      }
+    }
+  }
+}
