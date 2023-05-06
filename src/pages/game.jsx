@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { GameDashboard } from '@/components';
+import { GameDashboard } from '@/composes';
 import { fetchMathTasks } from '@/utils';
 
 import styles from '@/styles/gamePage.module.scss';

@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { Keyboard, SimpleTask, AnswersCount, AnswerModal } from '@/components';
-// import { addTaskToMongo } from '@/utils/taskOperations';
+import { useState, useEffect, useRef } from 'react';
+import { Keyboard, SimpleTask, AnswersCount, TaskResult } from '@/components';
+import { addTaskToMongo } from '@/utils/taskOperations';
 
 import { getRandom } from '@/utils';
 
@@ -17,13 +17,12 @@ const GameDashboard = ({ pageWidth, mathTasks }) => {
   const [rightAnswer, setRightAnswer] = useState();
   const [corectAnswerCount, setCorectAnswerCount] = useState(0);
   const [wrongAnswerCount, setWrongAnswerCount] = useState(0);
-
-  const [timerId, setTimerId] = useState();
+  const timerId = useRef(null);
+  // const [timerId, setTimerId] = useState();
 
   useEffect(() => {
     if (tuskNumber) {
-      const timer = setTimeout(checkAnswer, 20000);
-      setTimerId(timer);
+      timerId.current = setTimeout(checkAnswer, 20000);
     }
   }, [tuskNumber]);
 
@@ -43,8 +42,8 @@ const GameDashboard = ({ pageWidth, mathTasks }) => {
     const checkAnswer = rightAnswer === +secretValue;
     setRightAnswer(task);
     setShowAnswerModal(true);
-    clearTimeout(timerId);
-    // addTaskToMongo(task, rightAnswer, checkAnswer);
+    clearTimeout(timerId.current);
+    addTaskToMongo(task, +secretValue, rightAnswer, checkAnswer);
     if (checkAnswer) {
       setIsCorectAnswer(true);
       return setCorectAnswerCount(corectAnswerCount + 1);
@@ -64,7 +63,7 @@ const GameDashboard = ({ pageWidth, mathTasks }) => {
   return (
     <>
       {showAnswerModal && rightAnswer ? (
-        <AnswerModal
+        <TaskResult
           isCorectAnswer={isCorectAnswer}
           task={rightAnswer}
           closeHandler={closeHandler}

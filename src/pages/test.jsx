@@ -5,7 +5,7 @@ import styles from '@/styles/test.module.scss';
 const TestPage = () => {
   useEffect(() => {
     // fetch();
-    console.log(/^\d+$/.test('1234'));
+    // console.log(/^\d+$/.test('1234'));
   }, []);
   // const fetch = async () => {
   //   const res = await axios.get('/api/addCompleteTask');
