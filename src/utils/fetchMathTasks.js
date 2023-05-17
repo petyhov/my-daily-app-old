@@ -5,7 +5,7 @@ const fetchMathTasks = async () => {
     const response = await axios.get('/api/mathTasksApi');
     return response.data.length > 0 ? response.data : [];
   } catch (e) {
-    alert('something went wraong');
+    alert('something went wrong');
   }
 };
 

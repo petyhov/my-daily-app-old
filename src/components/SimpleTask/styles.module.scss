@@ -36,10 +36,11 @@
         var(--purple-color) 50%,
         transparent 0
       );
-
       background-size: 200% 100%;
       background-position: right;
-      animation: makeItfadeIn 20s linear forwards;
+      animation-name: makeItfadeIn;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
     }
   }
 }

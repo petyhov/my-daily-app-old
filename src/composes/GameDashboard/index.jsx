@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Keyboard, SimpleTask, AnswersCount, TaskResult } from '@/components';
 import { addTaskToMongo } from '@/utils/taskOperations';
+import { gamesConfig } from '@/configs';
 
 import { getRandom } from '@/utils';
 
@@ -18,11 +19,12 @@ const GameDashboard = ({ pageWidth, mathTasks }) => {
   const [corectAnswerCount, setCorectAnswerCount] = useState(0);
   const [wrongAnswerCount, setWrongAnswerCount] = useState(0);
   const timerId = useRef(null);
-  // const [timerId, setTimerId] = useState();
+
+  const { simpleTaskTime } = gamesConfig;
 
   useEffect(() => {
     if (tuskNumber) {
-      timerId.current = setTimeout(checkAnswer, 20000);
+      timerId.current = setTimeout(checkAnswer, simpleTaskTime);
     }
   }, [tuskNumber]);
 

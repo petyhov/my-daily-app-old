@@ -1,3 +1,5 @@
+import SecretItem from './SecretItem';
+
 import styles from './styles.module.scss';
 
 const SimpleTask = ({ task, secretItem, secretValue }) => {
@@ -11,9 +13,7 @@ const SimpleTask = ({ task, secretItem, secretValue }) => {
             <p>{first}</p>
           </li>
         ) : (
-          <li className={`${styles.secret} ${styles.item}`}>
-            <p>{secretValue}</p>
-          </li>
+          <SecretItem secretValue={secretValue} />
         )}
         <li className={styles.item}>
           <p>{operation === 'plus' ? '+' : '-'}</p>
@@ -23,9 +23,7 @@ const SimpleTask = ({ task, secretItem, secretValue }) => {
             <p>{second}</p>
           </li>
         ) : (
-          <li className={`${styles.secret} ${styles.item}`}>
-            <p>{secretValue}</p>
-          </li>
+          <SecretItem secretValue={secretValue} />
         )}
         <li className={styles.item}>
           <p>=</p>
@@ -35,9 +33,7 @@ const SimpleTask = ({ task, secretItem, secretValue }) => {
             <p>{equal}</p>
           </li>
         ) : (
-          <li className={`${styles.secret} ${styles.item}`}>
-            <p>{secretValue}</p>
-          </li>
+          <SecretItem secretValue={secretValue} />
         )}
       </ul>
     </div>
