@@ -1,16 +1,14 @@
-// import Image from 'next/image';
+import BurgerBtn from '@/components/BurgerBtn';
 
 import styles from './styles.module.scss';
 
-// import MenuIcon from '@/assets/icons/menu.svg';
-
-const Header = () => (
-  <header className={styles.container}>
-    <p>MyDailyApp</p>
-    {/* <button>
-      <Image src={MenuIcon} alt="menu" />
-    </button> */}
-  </header>
-);
+const Header = () => {
+  return (
+    <header className={styles.container}>
+      <p>MyDailyApp</p>
+      <BurgerBtn />
+    </header>
+  );
+};
 
 export default Header;

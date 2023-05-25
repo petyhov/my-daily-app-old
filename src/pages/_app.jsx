@@ -2,9 +2,9 @@ import React from 'react';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
 
-import { Header } from '@/composes';
+import { Header, UserMenu } from '@/composes';
 
-import '@/styles/globals.css';
+import '@/styles/globals.scss';
 
 export default function App({ Component, pageProps }) {
   const [pageWidth, setPageWidth] = useState(null);
@@ -48,7 +48,8 @@ export default function App({ Component, pageProps }) {
         <link rel="apple-touch-icon" href="/apple-icon.png"></link>
         <meta name="theme-color" content="#f0ebf4" />
       </Head>
-      <Header />
+      <Header pageWidth={pageWidth} />
+      <UserMenu />
       <Component {...pageProps} pageWidth={pageWidth} />
     </>
   );

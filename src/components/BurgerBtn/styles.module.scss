@@ -1,0 +1,12 @@
+.burger {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  span {
+    width: 100%;
+    height: 4px;
+    background-color: var(--pink-color);
+  }
+}
