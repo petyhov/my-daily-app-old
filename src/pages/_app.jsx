@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
 
-import { Header, UserMenu } from '@/composes';
+import { Header } from '@/composes';
 
 import '@/styles/globals.scss';
 
@@ -49,7 +49,6 @@ export default function App({ Component, pageProps }) {
         <meta name="theme-color" content="#f0ebf4" />
       </Head>
       <Header pageWidth={pageWidth} />
-      <UserMenu />
       <Component {...pageProps} pageWidth={pageWidth} />
     </>
   );

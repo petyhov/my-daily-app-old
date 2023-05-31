@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 // import axios from 'axios';
-import styles from '@/styles/test.module.scss';
+// import styles from '@/styles/test.module.scss';
+
+import Spinner from '@/components/Spinner';
 
 const TestPage = () => {
   useEffect(() => {
@@ -14,7 +16,8 @@ const TestPage = () => {
   // };
   return (
     <div>
-      <div className={styles.one}>TEST PAGE</div>
+      {/* <div className={styles.one}>TEST PAGE</div> */}
+      <Spinner />
     </div>
   );
 };
