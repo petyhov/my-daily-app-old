@@ -1,7 +1,7 @@
 import { createReducer } from '@reduxjs/toolkit';
 
 const initalState = {
-  width: 0,
+  screenWidth: typeof window === 'object' ? window.innerWidth : null,
 };
 
 const reducer = createReducer(initalState, {});
