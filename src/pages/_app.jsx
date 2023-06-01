@@ -1,7 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
+import { Provider } from 'react-redux';
 
+import store from '@/redux/store.js';
 import { Header } from '@/composes';
 
 import '@/styles/globals.scss';
@@ -48,8 +50,10 @@ export default function App({ Component, pageProps }) {
         <link rel="apple-touch-icon" href="/apple-icon.png"></link>
         <meta name="theme-color" content="#f0ebf4" />
       </Head>
-      <Header pageWidth={pageWidth} />
-      <Component {...pageProps} pageWidth={pageWidth} />
+      <Provider store={store}>
+        <Header pageWidth={pageWidth} />
+        <Component {...pageProps} pageWidth={pageWidth} />
+      </Provider>
     </>
   );
 }
