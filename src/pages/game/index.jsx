@@ -1,3 +1,3 @@
-import GamePage from './game';
+import GamePageContainer from './GamePageContainer';
 
-export default GamePage;
+export default GamePageContainer;
