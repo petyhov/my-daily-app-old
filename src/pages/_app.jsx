@@ -1,26 +1,14 @@
 import React from 'react';
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
 import { Provider } from 'react-redux';
 
 import store from '@/redux/store.js';
 import { Header } from '@/composes';
+import { AppConfigHost } from '@/hosts';
 
 import '@/styles/globals.scss';
 
 export default function App({ Component, pageProps }) {
-  const [pageWidth, setPageWidth] = useState(null);
-
-  const handleResize = () => {
-    setPageWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    handleResize();
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   return (
     <>
       <Head>
@@ -51,8 +39,9 @@ export default function App({ Component, pageProps }) {
         <meta name="theme-color" content="#f0ebf4" />
       </Head>
       <Provider store={store}>
-        <Header pageWidth={pageWidth} />
-        <Component {...pageProps} pageWidth={pageWidth} />
+        <Header />
+        <Component {...pageProps} />
+        <AppConfigHost />
       </Provider>
     </>
   );

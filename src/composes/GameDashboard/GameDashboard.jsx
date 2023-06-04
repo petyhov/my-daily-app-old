@@ -7,7 +7,7 @@ import { getRandom } from '@/utils';
 
 const secretItemsArr = ['first', 'second', 'equal'];
 
-const GameDashboard = ({ pageWidth, mathTasks }) => {
+const GameDashboard = ({ mathTasks }) => {
   const [tuskNumber, setTuskNumber] = useState(
     getRandom(0, mathTasks.length - 1)
   );
@@ -82,7 +82,6 @@ const GameDashboard = ({ pageWidth, mathTasks }) => {
             secretValue={secretValue}
           />
           <Keyboard
-            pageWidth={pageWidth}
             secretValue={secretValue}
             secretValueHandler={secretValueHandler}
             removeValueHandler={removeValueHandler}

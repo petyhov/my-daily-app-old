@@ -1,6 +1,6 @@
 import { createAction } from '@reduxjs/toolkit';
 
-import { appConfigTypes } from './';
+import appConfigTypes from './appConfigTypes';
 
 const actions = {
   setDeviceWidth: createAction(appConfigTypes.setDeviceWidth),

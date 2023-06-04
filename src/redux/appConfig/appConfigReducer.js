@@ -1,9 +1,14 @@
 import { createReducer } from '@reduxjs/toolkit';
+import appConfigAction from './appConfigAction';
 
 const initalState = {
-  screenWidth: typeof window === 'object' ? window.innerWidth : null,
+  deviceWidth: 0,
 };
 
-const reducer = createReducer(initalState, {});
+const reducer = createReducer(initalState, {
+  [appConfigAction.setDeviceWidth]: (state, action) => {
+    return { deviceWidth: action.payload };
+  },
+});
 
 export default reducer;
