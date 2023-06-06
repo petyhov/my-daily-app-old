@@ -8,7 +8,7 @@ const Spinner = () => {
   return (
     <>
       <div className={styles.container}>
-        <Image src={sun1.src} width={200} height={200} />
+        <Image src={sun1.src} width={200} height={200} alt="spinner" />
       </div>
     </>
   );

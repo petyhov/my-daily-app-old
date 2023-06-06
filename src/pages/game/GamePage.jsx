@@ -1,6 +1,6 @@
 import { GameDashboard } from '@/composes';
 
-import styles from '@/styles/gamePage.module.scss';
+import styles from './styles.module.scss';
 
 const GamePage = (props) => {
   const { mathTasks } = props;

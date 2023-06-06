@@ -1,0 +1,16 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--purple-color);
+  th,
+  td {
+    padding: 4px;
+    font-size: 14px;
+
+    text-align: center;
+    border: 1px solid var(--purple-color);
+    color: var(--purple-color);
+  }
+  th {
+  }
+}
