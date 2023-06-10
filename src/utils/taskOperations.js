@@ -1,12 +1,23 @@
-export const addTaskToMongo = (task, secretValue, rightAnswer, checkAnswer) => {
+import axios from 'axios';
+
+export const addTaskToMongo = (task, secretItem, secretValue, checkAnswer) => {
+  const { operation } = task;
+
+  const checkForX = (numberName) => {
+    return numberName === secretItem ? 'X' : task[numberName];
+  };
+
+  const secretTask = `${checkForX('first')}${
+    operation === 'plus' ? '+' : '-'
+  }${checkForX('second')}=${checkForX('equal')}`;
+
   try {
     axios.post('/api/addCompleteTask', {
-      task,
+      secretTask,
       secretValue,
-      rightAnswer,
       checkAnswer,
     });
   } catch (e) {
-    alert('something went wraong');
+    alert('something went wrong');
   }
 };

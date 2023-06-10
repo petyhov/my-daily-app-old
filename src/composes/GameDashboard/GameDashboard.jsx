@@ -45,7 +45,7 @@ const GameDashboard = ({ mathTasks }) => {
     setRightAnswer(task);
     setShowAnswerModal(true);
     clearTimeout(timerId.current);
-    addTaskToMongo(task, +secretValue, rightAnswer, checkAnswer);
+    addTaskToMongo(task, secretItem, +secretValue, checkAnswer);
     if (checkAnswer) {
       setIsCorectAnswer(true);
       return setCorectAnswerCount(corectAnswerCount + 1);
