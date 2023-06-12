@@ -1,16 +1,32 @@
 .table {
+  margin: 0 auto;
+  max-width: 600px;
   width: 100%;
   border-collapse: collapse;
   border: 1px solid var(--purple-color);
+  th {
+    font-size: 18px;
+    color: var(--purple-color);
+  }
+  td {
+    font-size: 24px;
+  }
   th,
   td {
     padding: 4px;
-    font-size: 14px;
-
     text-align: center;
     border: 1px solid var(--purple-color);
-    color: var(--purple-color);
   }
-  th {
+  td:nth-child(2) {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .table {
+    th,
+    td {
+      font-size: 24px;
+    }
   }
 }

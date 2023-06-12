@@ -1,6 +1,11 @@
 .row {
-}
-
-.taskCell {
-  width: 80%;
+  .date {
+    font-size: 16px;
+  }
+  &.right td {
+    color: var(--green-color);
+  }
+  &.wrong td {
+    color: var(--red-color);
+  }
 }

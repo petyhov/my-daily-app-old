@@ -6,6 +6,7 @@ const StatisticsList = ({ list }) => {
     <table className={styles.table}>
       <thead>
         <tr className={styles.row}>
+          <th>Дата</th>
           <th>Приклад</th>
           <th>Результат</th>
         </tr>
