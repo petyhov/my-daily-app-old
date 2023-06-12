@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 // import axios from 'axios';
 // import styles from '@/styles/test.module.scss';
 
-import Spinner from '@/components/Spinner';
-
 const TestPage = () => {
   useEffect(() => {
     // fetch();
@@ -14,12 +12,7 @@ const TestPage = () => {
   //   console.log(res);
   //   return res;
   // };
-  return (
-    <div>
-      {/* <div className={styles.one}>TEST PAGE</div> */}
-      <Spinner />
-    </div>
-  );
+  return <div>{/* <div className={styles.one}>TEST PAGE</div> */}</div>;
 };
 
 export default TestPage;

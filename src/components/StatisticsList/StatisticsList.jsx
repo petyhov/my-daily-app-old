@@ -1,5 +1,5 @@
 import styles from './styles.module.scss';
-import StatisticsItem from '../StatisticsItem';
+import { StatisticsItem } from '../';
 
 const StatisticsList = ({ list }) => {
   return (

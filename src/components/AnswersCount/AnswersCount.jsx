@@ -1,8 +1,9 @@
 import Image from 'next/image';
-import styles from './styles.module.scss';
+import PropTypes from 'prop-types';
 
 import CorrectIcon from '@/assets/icons/checkmark.svg';
 import WrongIcon from '@/assets/icons/cross.svg';
+import styles from './styles.module.scss';
 
 const AnswersCount = ({ corectAnswerCount, wrongAnswerCount }) => {
   return (
@@ -13,6 +14,11 @@ const AnswersCount = ({ corectAnswerCount, wrongAnswerCount }) => {
       <p>{wrongAnswerCount}</p>
     </div>
   );
+};
+
+AnswersCount.propTypes = {
+  corectAnswerCount: PropTypes.number,
+  wrongAnswerCount: PropTypes.number,
 };
 
 export default AnswersCount;

@@ -1,4 +1,4 @@
-import BurgerBtn from '@/components/BurgerBtn';
+import { BurgerBtn } from '@/composes';
 
 import styles from './styles.module.scss';
 

@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
+
 import { Keyboard, SimpleTask, AnswersCount, TaskResult } from '@/components';
 import { addTaskToMongo } from '@/utils/taskOperations';
 import { gamesConfig } from '@/configs';
-
 import { getRandom } from '@/utils';
 
 const secretItemsArr = ['first', 'second', 'equal'];
