@@ -7,7 +7,7 @@ const GamePage = (props) => {
 
   return (
     <div className={styles.container}>
-      <>{mathTasks.length > 0 && <GameDashboard {...props} />}</>
+      <>{mathTasks?.length > 0 && <GameDashboard {...props} />}</>
     </div>
   );
 };

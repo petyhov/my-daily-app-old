@@ -12,7 +12,7 @@ const StatisticsList = ({ list }) => {
         </tr>
       </thead>
       <tbody>
-        {list.map((item) => (
+        {list?.map((item) => (
           <StatisticsItem key={item._id} item={item} />
         ))}
       </tbody>
