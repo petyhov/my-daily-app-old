@@ -16,6 +16,9 @@
     &:not(:last-child) {
       margin-bottom: 24px;
     }
+    &.active {
+      text-decoration: underline;
+    }
   }
   &.active {
     right: 0;

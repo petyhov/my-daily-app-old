@@ -10,7 +10,6 @@ const withPWA = require('next-pwa')({
 const nextConfig = withPWA({
   env: {
     DB_NAME: prodMode ? 'my-daily-app' : 'my-daily-app-test',
-    BUILD_TYPE: process.env.DEV_BUILD,
   },
 });
 

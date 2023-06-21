@@ -12,7 +12,7 @@ const BurgerBtnContainer = () => {
     dispatch(appConfigAction.setShowSidebar(!isShow));
   };
 
-  return <BurgerBtn handler={burgerHandler} />;
+  return <BurgerBtn handler={burgerHandler} isShow={isShow} />;
 };
 
 export default BurgerBtnContainer;

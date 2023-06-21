@@ -1,5 +1,5 @@
 export * from './appConfig';
-export * from './taskCounter';
+export * from './answersCounter';
 
 import store from './store';
 

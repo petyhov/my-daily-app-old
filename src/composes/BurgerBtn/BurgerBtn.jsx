@@ -1,11 +1,8 @@
-import { useSelector } from 'react-redux';
-
-import { isShowSidebar } from '@/redux';
+import PropTypes from 'prop-types';
 
 import styles from './styles.module.scss';
 
-const BurgerBtn = ({ handler }) => {
-  const isShow = useSelector((state) => isShowSidebar(state));
+const BurgerBtn = ({ handler, isShow }) => {
   return (
     <button
       className={`${styles.burger} ${isShow && styles.active}`}
@@ -16,6 +13,11 @@ const BurgerBtn = ({ handler }) => {
       <span />
     </button>
   );
+};
+
+BurgerBtn.propTypes = {
+  handler: PropTypes.func,
+  isShow: PropTypes.bool,
 };
 
 export default BurgerBtn;

@@ -10,6 +10,11 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
           rel="stylesheet"
         />
+        <script
+          src="https://kit.fontawesome.com/f0ad28ac2a.js"
+          crossOrigin="anonymous"
+          async
+        ></script>
       </Head>
       <body>
         <Main />

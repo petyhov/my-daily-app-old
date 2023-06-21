@@ -3,7 +3,8 @@ import Head from 'next/head';
 import { Provider } from 'react-redux';
 
 import store from '@/redux/store.js';
-import { Header, Sidebar } from '@/composes';
+import { Header } from '@/components';
+import { Sidebar } from '@/composes';
 import { AppConfigHost } from '@/hosts';
 
 import '@/styles/globals.scss';

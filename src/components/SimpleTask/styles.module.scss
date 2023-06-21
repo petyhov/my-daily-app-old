@@ -29,19 +29,6 @@
         color: var(--main-color);
       }
     }
-    .secret {
-      border: 4px solid var(--purple-color);
-      background: linear-gradient(
-        to right,
-        var(--purple-color) 50%,
-        transparent 0
-      );
-      background-size: 200% 100%;
-      background-position: right;
-      animation-name: makeItfadeIn;
-      animation-timing-function: linear;
-      animation-fill-mode: forwards;
-    }
   }
 }
 

@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 
 import { appConfigReducer } from './appConfig';
-import { taskCounterReducer } from './taskCounter';
+import { answersCounterReducer } from './answersCounter';
 
 const store = configureStore({
   reducer: {
     appConfig: appConfigReducer,
-    taskCounter: taskCounterReducer,
+    answersCounter: answersCounterReducer,
   },
 });
 

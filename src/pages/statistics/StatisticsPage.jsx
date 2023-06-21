@@ -4,7 +4,11 @@ import StatisticsList from '@/components/StatisticsList';
 const StatisticsPage = ({ list }) => {
   return (
     <div className={styles.container}>
-      <StatisticsList list={list} />
+      {!!list.length ? (
+        <StatisticsList list={list} />
+      ) : (
+        <p className={styles.emptyData}>Дані відстні</p>
+      )}
     </div>
   );
 };

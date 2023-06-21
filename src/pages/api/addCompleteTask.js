@@ -9,7 +9,7 @@ export default async function handler(req, res) {
       secretTask,
       secretValue,
       checkAnswer,
-      date: new Date().toLocaleString('uk-UA'),
+      date: new Date().getTime(),
     });
     res.status(200).json({ status: 'complete' });
   } catch (e) {

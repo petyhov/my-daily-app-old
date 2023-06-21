@@ -1,5 +1,14 @@
 import axios from 'axios';
 
+export const fetchAllMathTasks = async () => {
+  try {
+    const response = await axios.get('/api/fetchAllMathTasks');
+    return response.data.length > 0 ? response.data : [];
+  } catch (e) {
+    alert('something went wrong');
+  }
+};
+
 export const addTaskToMongo = (task, secretItem, secretValue, checkAnswer) => {
   const { operation } = task;
 

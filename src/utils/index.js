@@ -1,2 +1,4 @@
-export { default as fetchMathTasks } from './fetchMathTasks';
 export { default as getRandom } from './getRandom';
+export * from './localStorageOperations';
+export * from './statisticsOperations';
+export * from './taskOperations';
