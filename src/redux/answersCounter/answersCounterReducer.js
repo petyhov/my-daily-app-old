@@ -1,10 +1,19 @@
 import { createReducer } from '@reduxjs/toolkit';
 
+import answersCounterAction from './answersCounterAction';
+
 const initState = {
-  corectAnswerCount: 0,
+  correctAnswerCount: 0,
   wrongAnswerCount: 0,
 };
 
-const counter = createReducer(initState, {});
+const reducer = createReducer(initState, {
+  [answersCounterAction.increaseCorrectAnswer]: (state) => {
+    return { ...state, correctAnswerCount: state.correctAnswerCount + 1 };
+  },
+  [answersCounterAction.increaseWrongAnswer]: (state) => {
+    return { ...state, wrongAnswerCount: state.wrongAnswerCount + 1 };
+  },
+});
 
-export default counter;
+export default reducer;

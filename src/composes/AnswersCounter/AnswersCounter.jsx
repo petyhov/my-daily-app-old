@@ -5,11 +5,11 @@ import CorrectIcon from '@/assets/icons/checkmark.svg';
 import WrongIcon from '@/assets/icons/cross.svg';
 import styles from './styles.module.scss';
 
-const AnswersCount = ({ corectAnswerCount, wrongAnswerCount }) => {
+const AnswersCount = ({ correctAnswerCount, wrongAnswerCount }) => {
   return (
     <div className={styles.container}>
       <Image width={20} height={20} src={CorrectIcon.src} alt="corect icon" />
-      <p>{corectAnswerCount}</p>
+      <p>{correctAnswerCount}</p>
       <Image width={20} height={20} src={WrongIcon.src} alt="wrong icon" />
       <p>{wrongAnswerCount}</p>
       <div className={styles.btnWrap}>

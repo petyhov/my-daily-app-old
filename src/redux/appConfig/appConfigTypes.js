@@ -1,6 +1,6 @@
-const appConfigTypes = {
+const types = {
   setDeviceWidth: 'SET_DEVICE_WIDTH',
   setShowSidebar: 'SET_SHOW_SIDEBAR',
 };
 
-export default appConfigTypes;
+export default types;
