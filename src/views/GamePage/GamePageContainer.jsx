@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { gamesConfig } from '@/configs';
 import { fetchAllMathTasks, getRandom, addTaskToMongo } from '@/utils';
 import { WithLoader } from '@/hocs';
-import { answersCounterAction } from '@/redux';
+import { answersCounterActions } from '@/redux';
 
 import GamePage from './GamePage';
 
@@ -62,10 +62,10 @@ const GamePageContainer = () => {
     setShowAnswerModal(true);
     addTaskToMongo(task, secretItem, +userValue, checkAnswer);
     if (checkAnswer) {
-      dispatch(answersCounterAction.increaseCorrectAnswer());
+      dispatch(answersCounterActions.increaseCorrectAnswer());
       return setIsCorectAnswer(true);
     }
-    dispatch(answersCounterAction.increaseWrongAnswer());
+    dispatch(answersCounterActions.increaseWrongAnswer());
     setIsCorectAnswer(false);
   };
 
