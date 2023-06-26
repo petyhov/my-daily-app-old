@@ -6,7 +6,7 @@ import styles from './styles.module.scss';
 
 const TextModal = ({ text, handler, action }) => {
   return (
-    <WithModal>
+    <WithModal handler={handler}>
       <div className={styles.container}>
         <h2>{text}</h2>
         <div className={styles.btnWrap}>

@@ -13,13 +13,14 @@ const AnswersCountContainer = () => {
 
   const dispatch = useDispatch();
 
-  const modalHandler = () => {
+  const modalHandler = (e) => {
+    e.stopPropagation();
     setShowClearModal(!showClearModal);
   };
 
-  const confirmModalAction = () => {
+  const confirmModalAction = (e) => {
     dispatch(answersCounterActions.clearAnswersCounter());
-    modalHandler();
+    modalHandler(e);
   };
 
   return (
