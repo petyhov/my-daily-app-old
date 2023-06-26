@@ -8,9 +8,7 @@ const withPWA = require('next-pwa')({
 });
 
 const nextConfig = withPWA({
-  env: {
-    DB_NAME: prodMode ? 'my-daily-app' : 'my-daily-app-dev',
-  },
+  env: {},
 });
 
 module.exports = nextConfig;
