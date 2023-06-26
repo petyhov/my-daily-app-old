@@ -1,0 +1,26 @@
+.container {
+  h2 {
+    margin-bottom: 36px;
+    font-size: 24px;
+    text-align: center;
+    color: var(--purple-color);
+  }
+  .btnWrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  button {
+    width: 80px;
+    height: 40px;
+    border-radius: 10%;
+    font-size: 24px;
+  }
+  .cancelBtn {
+    border: 2px solid var(--purple-color);
+    color: var(--purple-color);
+  }
+  .actionBtn {
+    background-color: var(--purple-color);
+    color: var(--white-color);
+  }
+}

@@ -14,6 +14,12 @@ const reducer = createReducer(initState, {
   [answersCounterActions.increaseWrongAnswer]: (state) => {
     return { ...state, wrongAnswerCount: state.wrongAnswerCount + 1 };
   },
+  [answersCounterActions.clearAnswersCounter]: () => {
+    return {
+      correctAnswerCount: 0,
+      wrongAnswerCount: 0,
+    };
+  },
 });
 
 export default reducer;

@@ -7,6 +7,7 @@ const actions = {
     answersCounterTypes.increaseCorrectAnswer
   ),
   increaseWrongAnswer: createAction(answersCounterTypes.increaseWrongAnswer),
+  clearAnswersCounter: createAction(answersCounterTypes.clearAnswersCounter),
 };
 
 export default actions;

@@ -1,13 +1,36 @@
-import { useSelector } from 'react-redux';
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { getAnswersCounterData } from '@/redux';
+import { getAnswersCounterData, answersCounterActions } from '@/redux';
 
 import AnswersCount from './AnswersCounter';
 
 const AnswersCountContainer = () => {
-  const data = useSelector(getAnswersCounterData);
+  const [showClearModal, setShowClearModal] = useState(false);
+  const { correctAnswerCount, wrongAnswerCount } = useSelector(
+    getAnswersCounterData
+  );
 
-  return <AnswersCount {...data} />;
+  const dispatch = useDispatch();
+
+  const modalHandler = () => {
+    setShowClearModal(!showClearModal);
+  };
+
+  const confirmModalAction = () => {
+    dispatch(answersCounterActions.clearAnswersCounter());
+    modalHandler();
+  };
+
+  return (
+    <AnswersCount
+      correctAnswerCount={correctAnswerCount}
+      wrongAnswerCount={wrongAnswerCount}
+      showClearModal={showClearModal}
+      modalHandler={modalHandler}
+      confirmModalAction={confirmModalAction}
+    />
+  );
 };
 
 export default AnswersCountContainer;
