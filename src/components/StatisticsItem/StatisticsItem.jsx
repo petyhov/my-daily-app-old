@@ -20,7 +20,9 @@ const StatisticsItem = ({ item }) => {
       <td className={`${styles.taskCell}`}>
         <p>{secretTask}</p>
       </td>
-      <td className={styles.answer}>{secretValue}</td>
+      <td className={styles.answer}>
+        {secretValue === 0 ? 'не встигла' : secretValue}
+      </td>
     </tr>
   );
 };
