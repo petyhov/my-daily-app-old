@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Аріна",
+    "protected": false,
+    "permissions": ["game"]
+  },
+  {
+    "name": "Іра",
+    "protected": true,
+    "permissions": ["game", "wallet"]
+  },
+  {
+    "name": "Деніс",
+    "protected": true,
+    "permissions": ["game", "wallet"]
+  }
+]
