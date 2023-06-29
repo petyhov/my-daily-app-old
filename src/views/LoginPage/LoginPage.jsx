@@ -4,7 +4,9 @@ const LoginPage = ({ usersData }) => {
   return (
     <div className={styles.container}>
       {usersData.map((user) => (
-        <button key={user.name}>{user.name}</button>
+        <button key={user.name} className={styles.userBtn}>
+          {user.name}
+        </button>
       ))}
     </div>
   );

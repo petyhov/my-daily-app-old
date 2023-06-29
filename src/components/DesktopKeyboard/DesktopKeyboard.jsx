@@ -7,10 +7,10 @@ import ClearIcon from '@/assets/icons/clear.svg';
 import styles from './styles.module.scss';
 
 const DesktopView = ({
-  secretValue,
+  value,
   clickHandler,
   removeValueHandler,
-  checkAnswer,
+  nextHandler,
 }) => {
   return (
     <div className={styles.container} onClick={clickHandler}>
@@ -34,8 +34,8 @@ const DesktopView = ({
         </button>
         <button
           className={styles.nextBtn}
-          onClick={checkAnswer}
-          disabled={secretValue.length > 0 ? false : true}
+          onClick={nextHandler}
+          disabled={value.length > 0 ? false : true}
         >
           <Image
             width={ArrowIcon.width}
@@ -50,10 +50,10 @@ const DesktopView = ({
 };
 
 DesktopView.propTypes = {
-  secretValue: PropTypes.string,
+  value: PropTypes.string,
   clickHandler: PropTypes.func,
   removeValueHandler: PropTypes.func,
-  checkAnswer: PropTypes.func,
+  nextHandler: PropTypes.func,
 };
 
 export default DesktopView;

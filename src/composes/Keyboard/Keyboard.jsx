@@ -4,26 +4,26 @@ import { MobileKeyboard, DesktopKeyboard } from '@/components';
 
 const Keyboard = ({
   isMobileKeyboard,
-  secretValue,
+  value,
   clickHandler,
   removeValueHandler,
-  checkAnswer,
+  nextHandler,
 }) => {
   return (
     <>
       {isMobileKeyboard ? (
         <MobileKeyboard
-          secretValue={secretValue}
+          value={value}
           clickHandler={clickHandler}
           removeValueHandler={removeValueHandler}
-          checkAnswer={checkAnswer}
+          nextHandler={nextHandler}
         />
       ) : (
         <DesktopKeyboard
-          secretValue={secretValue}
+          value={value}
           clickHandler={clickHandler}
           removeValueHandler={removeValueHandler}
-          checkAnswer={checkAnswer}
+          nextHandler={nextHandler}
         />
       )}
     </>
@@ -32,10 +32,10 @@ const Keyboard = ({
 
 Keyboard.propTypes = {
   isMobileKeyboard: PropTypes.bool,
-  secretValue: PropTypes.string,
+  value: PropTypes.string,
   clickHandler: PropTypes.func,
   removeValueHandler: PropTypes.func,
-  checkAnswer: PropTypes.func,
+  nextHandler: PropTypes.func,
 };
 
 export default Keyboard;

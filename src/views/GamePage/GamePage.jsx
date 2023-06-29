@@ -33,10 +33,10 @@ const GamePage = ({
             secretValue={userValue}
           />
           <Keyboard
-            secretValue={userValue}
-            secretValueHandler={userValueHandler}
+            value={userValue}
+            valueHandler={userValueHandler}
             removeValueHandler={removeUserValueHandler}
-            checkAnswer={checkAnswerHandler}
+            nextHandler={checkAnswerHandler}
           />
         </>
       )}
