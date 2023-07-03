@@ -7,11 +7,13 @@
   {
     "name": "Іра",
     "protected": true,
+    "password": "0000",
     "permissions": ["game", "wallet"]
   },
   {
-    "name": "Деніс",
+    "name": "Денис",
     "protected": true,
+    "password": "0000",
     "permissions": ["game", "wallet"]
   }
 ]

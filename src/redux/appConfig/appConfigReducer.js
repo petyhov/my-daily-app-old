@@ -4,6 +4,8 @@ import appConfigAction from './appConfigAction';
 const initalState = {
   deviceWidth: 0,
   showSidebar: false,
+  userPassword: '',
+  isLoggedIn: false,
 };
 
 const reducer = createReducer(initalState, {
@@ -14,6 +16,12 @@ const reducer = createReducer(initalState, {
     return {
       ...state,
       showSidebar: action.payload,
+    };
+  },
+  [appConfigAction.setUserPassword]: (state, action) => {
+    return {
+      ...state,
+      userPassword: action.payload,
     };
   },
 });

@@ -31,10 +31,10 @@ const KeyboardContainer = ({
 };
 
 KeyboardContainer.propTypes = {
-  value: PropTypes.string,
-  valueHandler: PropTypes.func,
-  removeValueHandler: PropTypes.func,
-  nextHandler: PropTypes.func,
+  value: PropTypes.string.isRequired,
+  valueHandler: PropTypes.func.isRequired,
+  removeValueHandler: PropTypes.func.isRequired,
+  nextHandler: PropTypes.func.isRequired,
 };
 
 export default memo(KeyboardContainer);
