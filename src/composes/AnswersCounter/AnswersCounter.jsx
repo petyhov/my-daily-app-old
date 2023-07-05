@@ -39,7 +39,7 @@ const AnswersCount = ({
 };
 
 AnswersCount.propTypes = {
-  corectAnswerCount: PropTypes.number,
+  correctAnswerCount: PropTypes.number,
   wrongAnswerCount: PropTypes.number,
   showClearModal: PropTypes.bool,
   modalHandler: PropTypes.func,

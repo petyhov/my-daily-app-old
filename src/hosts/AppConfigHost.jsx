@@ -19,7 +19,7 @@ const AppConfigHost = () => {
     }
 
     dispatch(appConfigAction.setShowSidebar(false));
-  }, [router, dispatch]);
+  }, [router, dispatch, userData]);
 
   return <></>;
 };

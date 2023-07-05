@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import styles from './styles.module.scss';
 
 const PasswordHolder = ({ password }) => {
@@ -7,6 +9,10 @@ const PasswordHolder = ({ password }) => {
       <div className={styles.display}>{password}</div>
     </div>
   );
+};
+
+PasswordHolder.propTypes = {
+  password: PropTypes.string.isRequired,
 };
 
 export default PasswordHolder;

@@ -29,7 +29,9 @@ const GamePageContainer = () => {
   }, []);
 
   useEffect(() => {
-    return setCurrentTuskNumber(getRandom(0, allMathTasks.length - 1));
+    if (!!allMathTasks.length) {
+      return setCurrentTuskNumber(getRandom(0, allMathTasks.length - 1));
+    }
   }, [allMathTasks]);
 
   useEffect(() => {

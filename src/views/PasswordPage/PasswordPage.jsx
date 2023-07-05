@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { PasswordHolder } from '@/components';
 import { Keyboard } from '@/composes';
 
@@ -19,6 +21,14 @@ const PasswordPage = ({
       />
     </>
   );
+};
+
+PasswordPage.propTypes = {
+  userPassword: PropTypes.string.isRequired,
+  passwordHandler: PropTypes.string.isRequired,
+  removePasswordHandler: PropTypes.string.isRequired,
+  hidePassword: PropTypes.string.isRequired,
+  checkPassword: PropTypes.string.isRequired,
 };
 
 export default PasswordPage;

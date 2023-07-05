@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 
 import store from '@/redux/store.js';
@@ -9,7 +10,7 @@ import { AppConfigHost } from '@/hosts';
 
 import '@/styles/globals.scss';
 
-export default function App({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
@@ -47,4 +48,11 @@ export default function App({ Component, pageProps }) {
       </Provider>
     </>
   );
-}
+};
+
+App.propTypes = {
+  Component: PropTypes.func.isRequired,
+  pageProps: PropTypes.object.isRequired,
+};
+
+export default App;

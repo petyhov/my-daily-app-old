@@ -1,5 +1,8 @@
+import PropTypes from 'prop-types';
+
 import { SimpleTask, TaskResult } from '@/components';
 import { AnswersCounter, Keyboard } from '@/composes';
+
 import styles from './styles.module.scss';
 
 const GamePage = ({
@@ -42,6 +45,19 @@ const GamePage = ({
       )}
     </div>
   );
+};
+
+GamePage.propTypes = {
+  showAnswerModal: PropTypes.bool.isRequired,
+  isCorectAnswer: PropTypes.bool.isRequired,
+  closeHandler: PropTypes.func.isRequired,
+  allMathTasks: PropTypes.array.isRequired,
+  currentTuskNumber: PropTypes.number,
+  secretItem: PropTypes.string.isRequired,
+  userValue: PropTypes.string.isRequired,
+  userValueHandler: PropTypes.func.isRequired,
+  removeUserValueHandler: PropTypes.func.isRequired,
+  checkAnswerHandler: PropTypes.func.isRequired,
 };
 
 export default GamePage;

@@ -1,5 +1,8 @@
-import styles from './styles.module.scss';
+import PropTypes from 'prop-types';
+
 import StatisticsList from '@/components/StatisticsList';
+
+import styles from './styles.module.scss';
 
 const StatisticsPage = ({ list }) => {
   return (
@@ -11,6 +14,10 @@ const StatisticsPage = ({ list }) => {
       )}
     </div>
   );
+};
+
+StatisticsPage.propTypes = {
+  list: PropTypes.array.isRequired,
 };
 
 export default StatisticsPage;
