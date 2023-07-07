@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "test": "jest",
+    "test-coverage": "jest --collectCoverage --no-cache",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -23,8 +25,11 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
+    "@testing-library/react": "^14.0.0",
     "eslint-config-prettier": "^8.8.0",
     "husky": "^8.0.3",
+    "jest": "^29.6.1",
+    "jest-environment-jsdom": "^29.6.1",
     "lint-staged": "^13.2.1",
     "prettier": "^2.8.7"
   }
