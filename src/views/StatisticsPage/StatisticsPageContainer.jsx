@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react';
 
-import { fetchStatistics, transformDataForList } from '@/utils';
+import {
+  fetchStatistics,
+  transformHeadersName,
+  transformDataForList,
+} from '@/utils';
 import { WithLoader } from '@/hocs';
 
 import StatisticsPage from './StatisticsPage';
@@ -28,12 +32,11 @@ const StatisticsContainer = () => {
     const transformedData = statisticsArr.map((item) => {
       return transformDataForList(item, statisticTableHeaders);
     });
-
     setStatisticsList(transformedData);
     setIsLoading(false);
   };
 
-  const tableHeadersNames = statisticTableHeaders.map((item) => item.name);
+  const tableHeadersNames = transformHeadersName(statisticTableHeaders);
 
   return (
     <WithLoader isLoading={isLoading}>

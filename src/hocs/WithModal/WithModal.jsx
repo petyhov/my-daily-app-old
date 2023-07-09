@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './styles.module.scss';
 
-const WithLoader = ({ children, handler }) => {
+const WithLoader = ({ children, handler, closeAfterClickOutside = true }) => {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -12,11 +12,12 @@ const WithLoader = ({ children, handler }) => {
         handler(e);
       }
     };
-
-    document.addEventListener('click', checkIfClickedOutside);
-    return () => {
-      document.removeEventListener('click', checkIfClickedOutside);
-    };
+    if (closeAfterClickOutside) {
+      document.addEventListener('click', checkIfClickedOutside);
+      return () => {
+        document.removeEventListener('click', checkIfClickedOutside);
+      };
+    }
   }, [handler]);
 
   return (
@@ -29,6 +30,7 @@ const WithLoader = ({ children, handler }) => {
 WithLoader.propTypes = {
   children: PropTypes.node,
   handler: PropTypes.func,
+  closeAfterClickOutside: PropTypes.bool,
 };
 
 export default WithLoader;

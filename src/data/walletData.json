@@ -1,14 +1,16 @@
 [
   {
+    "date": 1688922926265,
     "name": "Іра",
     "type": "expense",
-    "vallue": "400",
+    "value": "400",
     "category": "foot"
   },
   {
+    "date": 168891926265,
     "name": "Денис",
-    "type": "expense",
-    "vallue": "400",
+    "type": "income",
+    "value": "400",
     "category": "auto"
   }
 ]

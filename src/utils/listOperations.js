@@ -16,3 +16,7 @@ export const transformDataForList = (item, cells) => {
     values,
   };
 };
+
+export const transformHeadersName = (arr) => {
+  return arr.map((item) => item.name);
+};
