@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Іра",
+    "type": "expense",
+    "vallue": "400",
+    "category": "foot"
+  },
+  {
+    "name": "Денис",
+    "type": "expense",
+    "vallue": "400",
+    "category": "auto"
+  }
+]

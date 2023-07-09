@@ -14,9 +14,9 @@ const AppConfigHost = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    if (router.route !== '/login' && !userData.name) {
-      router.push('/login');
-    }
+    // if (router.route !== '/login' && !userData.name) {
+    //   router.push('/login');
+    // }
 
     dispatch(appConfigAction.setShowSidebar(false));
   }, [router, dispatch, userData]);

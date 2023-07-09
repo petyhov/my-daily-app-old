@@ -1,12 +1,11 @@
 .row {
-  .date,
-  .answer {
+  .date {
     font-size: 16px;
   }
-  &.right td {
+  &.green td {
     color: var(--green-color);
   }
-  &.wrong td {
+  &.red td {
     color: var(--red-color);
   }
 }

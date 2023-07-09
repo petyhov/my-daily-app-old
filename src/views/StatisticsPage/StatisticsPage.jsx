@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 
-import StatisticsList from '@/components/StatisticsList';
+import { List } from '@/components';
 
 import styles from './styles.module.scss';
 
-const StatisticsPage = ({ list }) => {
+const StatisticsPage = ({ list, tableHeaders }) => {
   return (
     <div className={styles.container}>
       {!!list.length ? (
-        <StatisticsList list={list} />
+        <List list={list} headers={tableHeaders} />
       ) : (
         <p className={styles.emptyData}>Дані відстні</p>
       )}
@@ -18,6 +18,7 @@ const StatisticsPage = ({ list }) => {
 
 StatisticsPage.propTypes = {
   list: PropTypes.array.isRequired,
+  tableHeaders: PropTypes.array.isRequired,
 };
 
 export default StatisticsPage;

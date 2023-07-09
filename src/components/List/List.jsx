@@ -1,30 +1,31 @@
 import PropTypes from 'prop-types';
 
-import { StatisticsItem } from '../';
+import { ListItem } from '..';
 
 import styles from './styles.module.scss';
 
-const StatisticsList = ({ list }) => {
+const List = ({ list, headers }) => {
   return (
     <table className={styles.table}>
       <thead>
         <tr className={styles.row}>
-          <th>Дата</th>
-          <th>Приклад</th>
-          <th>Результат</th>
+          {headers.map((item) => (
+            <th key={item}>{item}</th>
+          ))}
         </tr>
       </thead>
       <tbody>
         {list?.map((item) => (
-          <StatisticsItem key={item._id} item={item} />
+          <ListItem key={item.values[0].value} item={item} />
         ))}
       </tbody>
     </table>
   );
 };
 
-StatisticsList.propTypes = {
+List.propTypes = {
   list: PropTypes.array,
+  headers: PropTypes.array,
 };
 
-export default StatisticsList;
+export default List;

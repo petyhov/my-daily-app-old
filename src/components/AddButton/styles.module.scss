@@ -1,0 +1,13 @@
+.addButton {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: var(--color-1);
+  i {
+    font-size: 48px;
+    color: var(--purple-color);
+  }
+}
