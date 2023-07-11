@@ -5,10 +5,11 @@ import PropTypes from 'prop-types';
 import AddWalletModal from './AddWalletModal';
 
 const defaultOptions = [
-  { value: 'food', label: 'Їжа' },
-  { value: 'auto', label: 'Авто' },
+  { value: 'food', label: 'Їжа 🍳' },
+  { value: 'auto', label: 'Авто 🚗' },
   { value: 'party', label: 'Паті 🤪' },
-  { value: 'clothes', label: 'Одежа' },
+  { value: 'clothes', label: 'Одежа 👕' },
+  { value: 'games', label: 'Ігри 🎮' },
   { value: 'other', label: 'Інше' },
 ];
 

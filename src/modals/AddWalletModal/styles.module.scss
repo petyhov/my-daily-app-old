@@ -27,29 +27,47 @@
       color: var(--purple-color);
     }
   }
-  .table {
-    margin: 0 auto;
+  .commentSection {
     width: 100%;
-    border-collapse: collapse;
-    border: 1px solid var(--purple-color);
-    th {
-      font-size: 18px;
-      color: var(--purple-color);
-    }
-    td {
-      font-size: 24px;
-    }
-    th,
-    td {
-      padding: 4px;
-      text-align: center;
-      border: 1px solid var(--purple-color);
-    }
-    td:nth-child(2) {
-      width: 100%;
+  }
+}
+
+.select {
+  color: var(--purple-color);
+
+  [class$='-control'] {
+    border: none;
+  }
+  [class$='-control'] {
+    width: 250px;
+    border: 2px solid var(--purple-color);
+    font-size: 20px;
+    box-shadow: none;
+    background-color: inherit;
+    &:hover {
+      border-color: var(--purple-color);
     }
   }
-  .valueCell {
-    width: 125px;
+  [class$='-placeholder'] {
+    font-size: inherit;
+    color: inherit;
+  }
+  [class$='-singleValue'] {
+    font-size: inherit;
+    color: inherit;
+  }
+  [class$='-indicatorSeparator'] {
+    width: 2px;
+    background-color: var(--purple-color);
+  }
+  [class$='-indicatorContainer'] {
+    color: inherit;
+    &:hover {
+      color: inherit;
+    }
+    svg {
+      width: 30px;
+      height: 30px;
+    }
   }
 }

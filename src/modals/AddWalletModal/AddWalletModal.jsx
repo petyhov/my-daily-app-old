@@ -11,6 +11,7 @@ const AddWalletModal = ({
   value,
   setValue,
   category,
+  setCategory,
   comment,
   defaultOptions,
 }) => {
@@ -25,11 +26,18 @@ const AddWalletModal = ({
         </div>
         <h3>Категорія</h3>
         <div className={styles.item}>
-          <Select options={defaultOptions} value={category} />
+          <Select
+            className={styles.select}
+            isSearchable={false}
+            options={defaultOptions}
+            value={category}
+            placeholder="Вибери категорію"
+            onChange={setCategory}
+          />
         </div>
         <h3>Коментар</h3>
         <div className={styles.item}>
-          <textarea value={comment} />
+          <textarea className={styles.commentSection} value={comment} />
         </div>
       </div>
     </WithModal>
@@ -41,6 +49,7 @@ AddWalletModal.propTypes = {
   value: PropTypes.array.isRequired,
   setValue: PropTypes.func.isRequired,
   category: PropTypes.array.isRequired,
+  setCategory: PropTypes.func.isRequired,
   comment: PropTypes.func.isRequired,
   defaultOptions: PropTypes.array.isRequired,
 };
