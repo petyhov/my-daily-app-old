@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+}
+
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 8px;
+  font-size: 48px;
+  color: var(--purple-color);
+
+  .item {
+    font-weight: bold;
+    text-align: center;
+    color: inherit;
+  }
+
+  button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--purple-color);
+    border-radius: 8px;
+    font-size: 50px;
+    color: inherit;
+    &:first-child {
+      i {
+        position: absolute;
+        top: -5px;
+      }
+    }
+    &:last-child {
+      i {
+        position: absolute;
+        top: -9px;
+      }
+    }
+  }
+}

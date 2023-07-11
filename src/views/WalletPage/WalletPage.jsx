@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 import { AddButton, List } from '@/components';
-import { AddWallet } from '@/modals';
+import { AddWalletModal } from '@/modals';
 
 import styles from './styles.module.scss';
 
@@ -14,7 +14,7 @@ const WalletPage = ({ list, tableHeaders, showAddModal, modalHandler }) => {
         <p className={styles.emptyData}>Дані відстні</p>
       )}
       <AddButton handler={modalHandler} />
-      {showAddModal && <AddWallet handler={modalHandler} />}
+      {showAddModal && <AddWalletModal handler={modalHandler} />}
     </div>
   );
 };
