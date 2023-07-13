@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import Select from 'react-select';
 
 import { WithModal } from '@/hocs';
-import { WalletValueControls } from '@/composes';
+import { WalletValueControls, DateComponent } from '@/composes';
 
 import styles from './styles.module.scss';
 
@@ -18,7 +18,12 @@ const AddWalletModal = ({
   return (
     <WithModal handler={handler} closeAfterClickOutside={false}>
       <div className={styles.container}>
+        <button className={styles.closeBtn} onClick={handler}>
+          <i className="fa-regular fa-circle-xmark"></i>
+        </button>
         <h2>Додати запис</h2>
+        <h3>Дата</h3>
+        <DateComponent />
         <h3>Значення</h3>
         <div className={styles.item}>
           <WalletValueControls value={value} setValue={setValue} />

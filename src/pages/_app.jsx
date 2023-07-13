@@ -9,6 +9,7 @@ import { Sidebar } from '@/composes';
 import { AppConfigHost } from '@/hosts';
 
 import '@/styles/globals.scss';
+import 'react-datepicker/dist/react-datepicker.css';
 
 const App = ({ Component, pageProps }) => {
   return (
