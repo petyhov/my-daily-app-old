@@ -1,7 +1,7 @@
 .container {
   position: relative;
   max-width: 500px;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   padding: 24px;
   border: 2px solid var(--purple-color);
@@ -28,7 +28,18 @@
     }
   }
   .commentSection {
+    padding: 8px;
     width: 100%;
+    border: 2px solid var(--purple-color);
+    color: var(--purple-color);
+    font-size: 20px;
+    background-color: inherit;
+    outline: none;
+  }
+
+  .btnContainer {
+    display: flex;
+    justify-content: space-between;
   }
 }
 

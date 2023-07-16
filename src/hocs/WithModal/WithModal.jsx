@@ -3,13 +3,17 @@ import PropTypes from 'prop-types';
 
 import styles from './styles.module.scss';
 
-const WithLoader = ({ children, handler, closeAfterClickOutside = true }) => {
+const WithLoader = ({
+  children,
+  modalHandler,
+  closeAfterClickOutside = true,
+}) => {
   const ref = useRef(null);
 
   useEffect(() => {
     const checkIfClickedOutside = (e) => {
       if (ref.current && !ref.current.contains(e.target)) {
-        handler(e);
+        modalHandler(e);
       }
     };
     if (closeAfterClickOutside) {
@@ -18,7 +22,7 @@ const WithLoader = ({ children, handler, closeAfterClickOutside = true }) => {
         document.removeEventListener('click', checkIfClickedOutside);
       };
     }
-  }, [handler]);
+  }, [closeAfterClickOutside, modalHandler]);
 
   return (
     <div className={styles.container} ref={ref}>
@@ -29,7 +33,7 @@ const WithLoader = ({ children, handler, closeAfterClickOutside = true }) => {
 
 WithLoader.propTypes = {
   children: PropTypes.node,
-  handler: PropTypes.func,
+  modalHandler: PropTypes.func,
   closeAfterClickOutside: PropTypes.bool,
 };
 

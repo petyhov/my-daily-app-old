@@ -13,27 +13,39 @@ const defaultOptions = [
   { value: 'other', label: 'Інше' },
 ];
 
-const AddWalletModalContainer = ({ handler }) => {
+const AddWalletModalContainer = ({ modalHandler }) => {
+  const [date, setDate] = useState(new Date());
   const [value, setValue] = useState([0, 0, 0, 0]);
   const [category, setCategory] = useState('');
   const [comment, setComment] = useState('');
 
+  const commentHandler = (e) => {
+    setComment(e.target.value);
+  };
+
+  const saveHandler = () => {
+    console.log('SAVE');
+  };
+
   return (
     <AddWalletModal
-      handler={handler}
+      modalHandler={modalHandler}
+      date={date}
+      setDate={setDate}
       value={value}
       setValue={setValue}
       category={category}
       setCategory={setCategory}
       comment={comment}
-      setComment={setComment}
+      commentHandler={commentHandler}
+      saveHandler={saveHandler}
       defaultOptions={defaultOptions}
     />
   );
 };
 
 AddWalletModalContainer.propTypes = {
-  handler: PropTypes.func.isRequired,
+  modalHandler: PropTypes.func.isRequired,
 };
 
 export default AddWalletModalContainer;

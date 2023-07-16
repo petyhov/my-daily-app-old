@@ -4,13 +4,13 @@ import { WithModal } from '@/hocs';
 
 import styles from './styles.module.scss';
 
-const TextModal = ({ text, handler, action }) => {
+const TextModal = ({ text, modalHandler, action }) => {
   return (
-    <WithModal handler={handler}>
+    <WithModal modalHandler={modalHandler}>
       <div className={styles.container}>
         <h2>{text}</h2>
         <div className={styles.btnWrap}>
-          <button className={styles.cancelBtn} onClick={handler}>
+          <button className={styles.cancelBtn} onClick={modalHandler}>
             Ні
           </button>
           <button className={styles.actionBtn} onClick={action}>
@@ -24,7 +24,7 @@ const TextModal = ({ text, handler, action }) => {
 
 TextModal.propTypes = {
   text: PropTypes.string,
-  handler: PropTypes.func,
+  modalHandler: PropTypes.func,
   action: PropTypes.func,
 };
 

@@ -30,7 +30,7 @@ const AnswersCount = ({
       {showClearModal && (
         <TextModal
           text="Очистити результат?"
-          handler={modalHandler}
+          modalHandler={modalHandler}
           action={confirmModalAction}
         />
       )}
