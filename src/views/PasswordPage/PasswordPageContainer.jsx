@@ -28,8 +28,7 @@ const PasswordPageContainer = () => {
   const hidePassword = () => {
     return userPassword
       .split('')
-      .map((number) => {
-        console.log('number', number);
+      .map(() => {
         return '*';
       })
       .concat();

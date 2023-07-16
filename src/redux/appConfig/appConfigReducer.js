@@ -1,4 +1,7 @@
 import { createReducer } from '@reduxjs/toolkit';
+
+import { setCookie } from '@/utils';
+
 import appConfigAction from './appConfigAction';
 
 const initalState = {
@@ -22,6 +25,13 @@ const reducer = createReducer(initalState, {
     return {
       ...state,
       userPassword: action.payload,
+    };
+  },
+  [appConfigAction.setLoggedIn]: (state, action) => {
+    setCookie('setLoggedIn', action.payload);
+    return {
+      ...state,
+      isLoggedIn: action.payload,
     };
   },
 });
