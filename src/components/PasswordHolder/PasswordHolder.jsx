@@ -12,7 +12,7 @@ const PasswordHolder = ({ password }) => {
 };
 
 PasswordHolder.propTypes = {
-  password: PropTypes.string.isRequired,
+  password: PropTypes.array.isRequired,
 };
 
 export default PasswordHolder;

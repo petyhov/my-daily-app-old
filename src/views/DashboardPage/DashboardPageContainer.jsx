@@ -1,5 +1,12 @@
+// import { DashboardList } from '@/components';
+
+import { useSelector } from 'react-redux';
+import { getUserRoutes } from '@/redux';
+
 const DashboardPageContainer = () => {
-  return <h3>Dashboard</h3>;
+  const data = useSelector((state) => getUserRoutes(state));
+  console.log(data);
+  return <p>DashboardList</p>;
 };
 
 export default DashboardPageContainer;

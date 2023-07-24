@@ -1,9 +1,10 @@
 import { createReducer } from '@reduxjs/toolkit';
 
 import userDataAction from './userDataAction';
-import { setCookie } from '@/utils';
+import { setCookie, getCookie } from '@/utils';
 
-const initalState = {};
+const initalState =
+  typeof window !== 'undefined' ? getCookie('userData') || {} : {};
 
 const reducer = createReducer(initalState, {
   [userDataAction.setUserData]: (_, action) => {

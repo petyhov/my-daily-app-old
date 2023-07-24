@@ -25,10 +25,10 @@ const PasswordPage = ({
 
 PasswordPage.propTypes = {
   userPassword: PropTypes.string.isRequired,
-  passwordHandler: PropTypes.string.isRequired,
-  removePasswordHandler: PropTypes.string.isRequired,
-  hidePassword: PropTypes.string.isRequired,
-  checkPassword: PropTypes.string.isRequired,
+  passwordHandler: PropTypes.func.isRequired,
+  removePasswordHandler: PropTypes.func.isRequired,
+  hidePassword: PropTypes.func.isRequired,
+  checkPassword: PropTypes.func.isRequired,
 };
 
 export default PasswordPage;
