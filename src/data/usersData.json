@@ -2,18 +2,18 @@
   {
     "name": "Аріна",
     "protected": false,
-    "permissions": ["game"]
+    "permissions": ["game", "statistics"]
   },
   {
     "name": "Іра",
     "protected": true,
     "password": "0000",
-    "permissions": ["game", "wallet"]
+    "permissions": ["game", "statistics", "wallet"]
   },
   {
     "name": "Денис",
     "protected": true,
     "password": "0000",
-    "permissions": ["game", "wallet"]
+    "permissions": ["game", "statistics", "wallet"]
   }
 ]

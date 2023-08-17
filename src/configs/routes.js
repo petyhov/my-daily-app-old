@@ -3,6 +3,7 @@ export const routes = {
   password: '/password',
   game: '/game',
   statistics: '/statistics',
+  dashboard: '/dashboard',
   wallet: '/wallet',
 };
 
@@ -12,13 +13,16 @@ export const routesData = {
   game: {
     name: 'Гра',
     image: 'fa-solid fa-dice',
+    route: routes.game,
   },
   statistics: {
     name: 'Статистика по грі',
-    image: '<i class="fa-solid fa-book-open"></i>',
+    image: 'fa-solid fa-book-open',
+    route: routes.statistics,
   },
   wallet: {
     name: 'Гаманець',
     image: 'fa-solid fa-wallet',
+    route: routes.wallet,
   },
 };

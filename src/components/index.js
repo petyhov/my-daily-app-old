@@ -6,6 +6,7 @@ export { default as ListItem } from './ListItem';
 export { default as MobileKeyboard } from './MobileKeyboard';
 export { default as PasswordHolder } from './PasswordHolder';
 export { default as PrimaryButton } from './PrimaryButton';
+export { default as RoutesList } from './RoutesList';
 export { default as SecondaryButton } from './SecondaryButton';
 export { default as SecretItem } from './SecretItem';
 export { default as SimpleTask } from './SimpleTask';
