@@ -11,4 +11,5 @@ export { default as SecondaryButton } from './SecondaryButton';
 export { default as SecretItem } from './SecretItem';
 export { default as SimpleTask } from './SimpleTask';
 export { default as Spinner } from './Spinner';
+export { default as Tabs } from "./Tabs";
 export { default as TaskResult } from './TaskResult';

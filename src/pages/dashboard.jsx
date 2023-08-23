@@ -7,7 +7,7 @@ import { RoutesList } from '@/components';
 
 import styles from '@/styles/dashboard.module.scss';
 
-const DashboardPageContainer = () => {
+const DashboardPage = () => {
   const userData = useSelector((state) => getUserData(state));
 
   const [routes, setRoutes] = useState([]);
@@ -30,4 +30,4 @@ const DashboardPageContainer = () => {
   );
 };
 
-export default DashboardPageContainer;
+export default DashboardPage;
