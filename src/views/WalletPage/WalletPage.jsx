@@ -13,7 +13,7 @@ const WalletPage = ({ list, tableHeaders, showAddModal, modalHandler }) => {
       ) : (
         <p className={styles.emptyData}>Дані відстні</p>
       )}
-      <AddButton modalHandler={modalHandler} />
+      <AddButton btnAction={modalHandler} />
       {showAddModal && <AddWalletModal modalHandler={modalHandler} />}
     </div>
   );

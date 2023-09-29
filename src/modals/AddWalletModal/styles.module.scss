@@ -26,6 +26,9 @@
       font-size: 48px;
       color: var(--purple-color);
     }
+    textarea {
+      resize: none;
+    }
   }
   .commentSection {
     padding: 8px;

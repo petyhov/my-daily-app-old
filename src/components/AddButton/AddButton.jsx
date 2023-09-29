@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 
 import styles from './styles.module.scss';
 
-const AddButton = ({ modalHandler }) => {
+const AddButton = ({ btnAction }) => {
   return (
-    <button className={styles.addButton} onClick={modalHandler}>
+    <button className={styles.addButton} onClick={btnAction}>
       <i className="fa-solid fa-plus"></i>
     </button>
   );
