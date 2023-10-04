@@ -1,1 +1,1 @@
-export const tasksTabs = ["All", "Ready", "Complete"];
+export const tasksTabs = ['All', 'To do', 'Complete'];

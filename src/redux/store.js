@@ -1,7 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
+
 import { appConfigReducer } from './appConfig';
 import { answersCounterReducer } from './answersCounter';
 import { userDataReducer } from './userData';
+import { userTasksReducer } from './userTasks';
+
 import { storageMiddleware } from './middlewares';
 
 const store = configureStore({
@@ -9,9 +12,9 @@ const store = configureStore({
     appConfig: appConfigReducer,
     answersCounter: answersCounterReducer,
     userData: userDataReducer,
+    userTasks: userTasksReducer,
   },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(storageMiddleware),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(),
 });
 
 export default store;

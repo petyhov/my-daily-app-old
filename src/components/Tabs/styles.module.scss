@@ -1,12 +1,19 @@
 .list {
-    display: flex;
-    gap: 10px;
-    li {
-        padding: 5px;
-        width: 100%;
-        max-width: 200px;
-        border: 1px solid red;
-        border-radius: 4px;
-        text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  li {
+    padding: 5px;
+    width: 100%;
+    border: 2px solid var(--purple-color);
+    border-radius: 8px;
+    text-align: center;
+    color: var(--purple-color);
+    font-size: 20px;
+    font-weight: bold;
+    &.active {
+      background-color: var(--purple-color);
+      color: var(--background-color);
     }
+  }
 }
