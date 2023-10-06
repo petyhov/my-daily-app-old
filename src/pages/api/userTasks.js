@@ -11,8 +11,10 @@ export default async function handler(req, res) {
       const data = await db.collection('userTasks').find({}).toArray();
       res.status(200).json(data);
     }
+
     if (req.method === apiConstants.put) {
-      const { _id, isDone } = req.body;
+      const { _id, value } = req.body;
+
       const { db } = await connectToDatabase();
       const data = await db.collection('userTasks').updateOne(
         {
@@ -20,10 +22,14 @@ export default async function handler(req, res) {
         },
         {
           $set: {
-            isDone: !isDone,
+            isDone: value,
           },
         }
       );
+
+      if (data.matchedCount === 0) {
+        return res.status(401).json('user task not found');
+      }
 
       res.status(200).json(data);
     }

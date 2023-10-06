@@ -3,3 +3,7 @@ export const apiConstants = {
   put: 'PUT',
   userTaskApi: `/api/userTasks`,
 };
+
+export const apiStatusConstants = {
+  pending: 'pending',
+};

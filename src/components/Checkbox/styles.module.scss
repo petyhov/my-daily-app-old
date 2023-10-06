@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--purple-color);
+  border-radius: 10%;
+  cursor: pointer;
+  i {
+    font-size: 1em;
+  }
+}

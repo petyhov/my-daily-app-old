@@ -11,7 +11,7 @@ const AddButton = ({ btnAction }) => {
 };
 
 AddButton.propTypes = {
-  modalHandler: PropTypes.func.isRequired,
+  btnAction: PropTypes.func.isRequired,
 };
 
 export default AddButton;

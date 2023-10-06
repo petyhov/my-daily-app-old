@@ -1,6 +1,10 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
+import { apiStatusConstants } from '@/configs';
+
+import { userTasksActions } from './';
+
 export const fetchUserTasks = createAsyncThunk(
   'userTasks',
   async (_, thunkAPI) => {
@@ -13,13 +17,17 @@ export const fetchUserTasks = createAsyncThunk(
   }
 );
 
-export const updateUserTasks = (arg) => async (dispatch) => {
+export const updateUserTask = (arg) => async (dispatch) => {
   try {
-    dispatch()
-    const response = await axios.put(`/api/userTasks`, arg);
-    console.log('RESPONSE2', response.status);
-    return response;
+    const { _id } = arg;
+    dispatch(
+      userTasksActions.updateTask({ _id, value: apiStatusConstants.pending })
+    );
+    const result = await axios.put(`/api/userTasks`, arg);
+    console.log('result', result);
   } catch (e) {
-    return thunkAPI.rejectWithValue(e.message);
+    console.log('ERROR ', arg);
+    // const { _id, value } = arg;
+    // dispatch(userTasksActions.updateTask());
   }
 };

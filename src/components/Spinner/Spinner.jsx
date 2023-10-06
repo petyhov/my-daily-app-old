@@ -1,15 +1,13 @@
-import Image from 'next/image';
-
-import sun1 from '@/assets/icons/sun1.svg';
+import PropTypes from 'prop-types';
 
 import styles from './styles.module.scss';
 
-const Spinner = () => {
-  return (
-    <div className={styles.container}>
-      <Image src={sun1.src} width={200} height={200} alt="spinner" />
-    </div>
-  );
+const Spinner = ({ size = 20 }) => {
+  return <div style={{ fontSize: size }} className={styles.loader} />;
+};
+
+Spinner.propTypes = {
+  size: PropTypes.number,
 };
 
 export default Spinner;

@@ -1,4 +1,3 @@
-export { default as AnswersCounter } from './AnswersCounter';
 export { default as BurgerBtn } from './BurgerBtn';
 export { default as DateComponent } from './DateComponent';
 export { default as Keyboard } from './Keyboard';

@@ -1,0 +1,22 @@
+.item {
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--purple-color);
+  border-radius: 8px;
+  color: var(--purple-color);
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .statusHolder {
+    margin-left: 8px;
+    flex-shrink: 0;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}

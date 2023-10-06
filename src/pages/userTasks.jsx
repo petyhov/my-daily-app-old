@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { fetchUserTasks, updateUserTasks, getUserTasksData } from '@/redux';
+import { fetchUserTasks, updateUserTask, getUserTasksData } from '@/redux';
 import { Tabs, UserTaskItem, AddButton } from '@/components';
 import { tasksTabs } from '@/configs';
 import { WithLoader } from '@/hocs';
@@ -19,7 +19,7 @@ const TasksPage = () => {
     if (!tasks.length) {
       dispatch(fetchUserTasks());
     }
-  }, []);
+  }, [dispatch, tasks]);
 
   const modalHandler = () => {
     return setShowAddModal(showAddModal);
@@ -35,9 +35,9 @@ const TasksPage = () => {
     return tasks;
   };
 
-  const taskHandler = (item) => () => {
+  const taskHandler = (item) => {
     const { _id, isDone } = item;
-    dispatch(updateUserTasks({ _id, isDone }));
+    dispatch(updateUserTask({ _id, value: !isDone }));
   };
 
   return (
@@ -50,7 +50,11 @@ const TasksPage = () => {
         />
         <ul>
           {currentTasks().map((item) => (
-            <UserTaskItem item={item} taskHandler={taskHandler} />
+            <UserTaskItem
+              key={item._id}
+              item={item}
+              taskHandler={taskHandler}
+            />
           ))}
         </ul>
         <AddButton btnAction={modalHandler} />
